@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Jquery Functions</title>
+
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- This is the address we will use to import library from and be allowed to use it -->
+	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+
+
+	<!-- this is where all the jquery functions will go -->
+	<script type="text/javascript">
+
+		// .ready waits for html to load first
+		$(document).ready(function() {
+    		
+    		// .hide()
+    		$("#hideButton").click(function(){
+    			$("p.hideMe").hide("slow");
+    		});
+    		// .show()
+    		$("#showButton").click(function(){
+    			$("p.hideMe").show("fast");
+    		});
+
+
+    		// .toggle()
+    		$("button#toggleButton").click(function(){
+    			$(".toggleimg").toggle();
+    		});
+
+
+    		// .slideUp()
+    		$("button#slideupButton").click(function(){
+    			$("img#ironmanPic").slideUp("slow");
+    		});
+    		// .slideDown()
+    		$("button#slidedownButton").click(function(){
+    			$("img#ironmanPic").slideDown("slow");
+    		});
+
+
+    		// .fadeIn()
+    		$("button#fadeInButton").click(function(){
+    			$("img#hawaiiPic").fadeIn("slow");
+    		})
+    		// .fadeOut()
+    		$("button#fadeOutButton").click(function(){
+    			$("img#hawaiiPic").fadeOut("slow");
+    		})
+
+
+    		// .addClass()
+    		$("button#addClassButton").click(function(){
+    			$("p.makeThisRed").addClass("red");
+    		});
+    		// .removeClass()
+     		$("button#removeClassButton").click(function(){
+    			$("p.red").removeClass("red");
+    		});
+
+
+    		// .before()
+    		$("button#addWordBefore").click(function(){
+    			$("p#addToThis").before("<p>Yoda Said</p>");
+    		});
+
+    		// .append()
+    		$("button#appendWordBefore").click(function(){
+    			$("p.appendThis").append("<p>...sting like a bee</p>");
+    		});
+
+    		// .hover()
+    		$("p.addLastName").hover(function(){
+    			$(this).replaceWith("<h1>Parker</h1>");
+    		});
+
+		}); // end document.ready
+	</script>
+</head>
+
+
+<body>
+
+	<!-- Show and Hide -->
+	<div class = "showHide">
+		<h2>.show and .hide function</h2>
+		<button type="button" id="hideButton">Click to Hide Text</button>
+		<button type="button" id="showButton">Click to Show Text</button>
+		<p class="hideMe">May the force be with you</p>
+	</div>
+
+
+	<!-- Toggle -->
+	<div class= "showHide">
+		<h2>.toggle function</h2>
+		<!-- button to toggle image -->
+		<button type="button" id="toggleButton">Click to toggle image</button><br>
+		<!-- boba image shown by default -->
+		<img src="images/Boba-Fett-icon.png" class="toggleimg" alt="boba image" height="150" width="150" class="toggleboba">
+		<!-- vader image is hidden by default -->
+		<img src="images/Darth-Vader-icon.png" class="toggleimg" alt="vader image" height="150" width="150" class="togglevader" style="display: none">
+	</div>
+
+
+	<!-- Slidedown and Slideup -->
+	<div class="showHide">
+		<h2>.slideUp() and .slideDown() function</h2>
+		<button type="button" id="slideupButton">Slide Up</button>
+		<button type="button" id="slidedownButton">Slide Down</button>
+		<img src="images/Iron_Man_portrait.png" id="ironmanPic" alt="iron man" height="150" width="150">
+	</div>
+
+
+	<!-- Fade In and Fade Out -->
+	<div class="showHide">
+		<h2>.fadeIn() and .fadeOut() function</h2>
+		<button type="button" id="fadeInButton">Fade In</button>
+		<button type="button" id="fadeOutButton">Fade Out</button>
+		<img src="images/culture-256x256-v2.png" id="hawaiiPic" alt="hawaii" height="150" width="150">
+	</div>
+
+
+	<!-- Add Class -->
+	<div class="showHide">
+		<h2>.addClass() and .removeClass()</h2>
+		<button type="button" id="addClassButton">Turn Sentence Red</button>
+		<button type="button" id="removeClassButton">Take Away Class</button>
+		<p class="makeThisRed">Turn this sentence red by clicking the button</p>
+	</div>
+
+
+	<!-- Before -->
+	<div class="showHide">
+		<h2>.before()</h2>
+		<button type="button" id="addWordBefore">Add a Word Before Sentence</button>
+		<p id="addToThis">Do or do not, there is no try</p>
+	</div>
+
+	<!-- Append -->
+	<div class="showHide">
+		<h2>.append()</h2>
+		<button type="button" id="appendWordBefore">Click to complete sentenct</button>
+		<p class="appendThis">Float like a butterfly</p>
+	</div>
+
+
+	<!-- Hover -->
+	<div class="showHide">
+		<h2>.hover()</h2>
+		<p class="addLastName">Peter </p>
+	</div>
+
+</body>
+
+</html>

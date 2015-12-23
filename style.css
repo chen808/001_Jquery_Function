@@ -1,0 +1,24 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 10px;
+}
+
+h2, p{
+	font-family: arial;
+
+}
+
+button{
+	background-color: orange;
+	border-radius: 15px;
+}
+
+.showHide{
+	border-bottom: 1px solid black;
+	width: 300px;
+}
+
+.red{
+	background-color: red;
+}
